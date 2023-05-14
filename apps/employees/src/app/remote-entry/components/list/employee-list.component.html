@@ -1,0 +1,41 @@
+<p-table
+  [value]="employees"
+  [paginator]="true"
+  [rows]="5"
+  [responsive]="true"
+  [loading]="loading"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>ID</th>
+      <th>Имя</th>
+      <th>Должность</th>
+      <th>Зарплата</th>
+      <th>Действие</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-employee>
+    <tr>
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.position }}</td>
+      <td>{{ employee.salary | currency : 'EUR' : true }}</td>
+      <td class="flex flex-row gap-2">
+        <button
+          pButton
+          type="button"
+          icon="pi pi-pencil"
+          class="p-button-warning p-mr-2"
+          (click)="editEmployee(employee)"
+        ></button>
+        <button
+          pButton
+          type="button"
+          icon="pi pi-trash"
+          class="p-button-danger"
+          (click)="deleteEmployee(employee.id)"
+        ></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

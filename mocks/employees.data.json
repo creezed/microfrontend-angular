@@ -1,0 +1,64 @@
+{
+  "employees": [
+    {
+      "name": "Bobovich",
+      "position": "middle",
+      "salary": 2,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Boris",
+      "position": "team lead",
+      "salary": "10000"
+    },
+    {
+      "name": "Bob",
+      "position": "Junior",
+      "salary": 2130,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "Bobin",
+      "position": "middle",
+      "salary": "2000"
+    },
+    {
+      "id": 7,
+      "name": "Bobovich",
+      "position": "senior",
+      "salary": "5000"
+    },
+    {
+      "id": 8,
+      "name": "Boris",
+      "position": "team lead",
+      "salary": "10000"
+    },
+    {
+      "id": 9,
+      "name": "Bob",
+      "position": "Junior",
+      "salary": "0"
+    },
+    {
+      "id": 10,
+      "name": "Bobin",
+      "position": "middle",
+      "salary": "2000"
+    },
+    {
+      "id": 11,
+      "name": "Bobovich",
+      "position": "senior",
+      "salary": "5000"
+    },
+    {
+      "name": "Boris",
+      "position": "junior",
+      "salary": "10000",
+      "id": 12
+    }
+  ]
+}

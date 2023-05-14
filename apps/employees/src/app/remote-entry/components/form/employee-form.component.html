@@ -1,0 +1,52 @@
+<form
+  [formGroup]="employeeForm"
+  (ngSubmit)="onSubmit()"
+  class="flex flex-column gap-3"
+>
+  <div class="p-fluid">
+    <input
+      pInputText
+      type="text"
+      class="p-input-filled"
+      placeholder="Имя"
+      formControlName="name"
+    />
+    <span *ngIf="_name?.invalid" class="p-error">Обязательное поле</span>
+  </div>
+  <div class="p-fluid">
+    <p-dropdown
+      placeholder="Должность"
+      formControlName="position"
+      optionLabel="name"
+      [options]="employeePosition"
+    ></p-dropdown>
+    <span *ngIf="_position?.invalid" class="p-error">Обязательное поле</span>
+  </div>
+  <div class="p-fluid">
+    <p-inputNumber
+      class="w-full"
+      placeholder="Зарплата"
+      mode="currency"
+      currency="EUR"
+      locale="es-ES"
+      formControlName="salary"
+    ></p-inputNumber>
+    <span *ngIf="_salary?.invalid" class="p-error">Обязательное поле</span>
+  </div>
+  <div class="flex align-items-center gap-2">
+    <button
+      pButton
+      type="submit"
+      [label]="buttonLabel"
+      class="p-button-success w-full"
+      [disabled]="employeeForm.invalid"
+    ></button>
+    <button
+      pButton
+      type="button"
+      label="Отмена"
+      class="p-button-secondary p-ml-3 w-full"
+      (click)="onCancel()"
+    ></button>
+  </div>
+</form>

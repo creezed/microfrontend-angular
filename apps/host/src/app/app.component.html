@@ -1,0 +1,19 @@
+<header class="flex flex-row justify-content-between align-items-center h-3rem">
+  <nav class="flex gap-3">
+    <a
+      class="text-color-secondary text-lg no-underline hover:text-primary"
+      [routerLink]="['/form']"
+      >Форма</a
+    >
+    <a
+      class="text-color-secondary hover:text-primary text-lg no-underline"
+      [routerLink]="['/employees']"
+      >Таблица</a
+    >
+  </nav>
+</header>
+<section class="flex-1 flex justify-content-center align-items-center">
+  <router-outlet></router-outlet>
+</section>
+<p-toast></p-toast>
+<p-confirmDialog [style]="{ width: '50vw' }"></p-confirmDialog>

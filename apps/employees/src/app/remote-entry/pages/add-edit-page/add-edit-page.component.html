@@ -1,0 +1,12 @@
+<h2 class="text-lg text-primary mb-2">{{ title }}</h2>
+<practica-employee-form
+  *ngIf="!loading"
+  [employee]="employee"
+  class="w-full"
+></practica-employee-form>
+<div
+  *ngIf="loading"
+  class="flex justify-content-center align-items-center w-full p-4"
+>
+  <p-progressSpinner></p-progressSpinner>
+</div>
